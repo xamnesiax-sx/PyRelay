@@ -1,6 +1,5 @@
 import threading
 import socket
-import Queue
 
 
 class Relay(object):
@@ -11,9 +10,6 @@ class Relay(object):
         self.clientInfo = clientInfo
         self.clientSock = clientSock
         self.relayType = relayType
-
-        sendQueue = Queue.Queue()
-        recvQueue = Queue.Queue()
 
         if self.relayType == 'c':
 
